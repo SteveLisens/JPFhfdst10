@@ -1,4 +1,9 @@
-public abstract class Voertuig implements Privaat, Milieu{
+package be.vdab.voertuigen;
+
+import be.vdab.util.Milieu;
+import be.vdab.util.Privaat;
+
+public abstract class Voertuig implements Privaat, Milieu {
     private String polishouder = "onbepaald";
     private float kostprijs;
     private int pk;
@@ -79,7 +84,7 @@ public abstract class Voertuig implements Privaat, Milieu{
 
     @Override
     public void geefMilieuData() {
-        System.out.println("--- Milieu data van voertuig ---");
+        System.out.println("--- be.vdab.util.Milieu data van voertuig ---");
         System.out.println("Pk: " + getPk());
         System.out.println("Gem. verbruik: " + getGemVerbruik());
         System.out.println("Kostprijs: " + getKostprijs());

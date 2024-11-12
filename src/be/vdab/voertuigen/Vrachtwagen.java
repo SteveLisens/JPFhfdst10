@@ -1,4 +1,8 @@
-public class Vrachtwagen  extends Voertuig implements Vervuiler{
+package be.vdab.voertuigen;
+
+import be.vdab.util.Vervuiler;
+
+public class Vrachtwagen  extends Voertuig implements Vervuiler {
 
     private float maxLading = 100000.0F;
     public Vrachtwagen(){

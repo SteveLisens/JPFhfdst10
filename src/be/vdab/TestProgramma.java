@@ -1,4 +1,5 @@
-import java.text.DateFormat;
+package be.vdab;
+
 import java.text.DecimalFormat;
 
 public class TestProgramma {
