@@ -1,4 +1,4 @@
-public class Vrachtwagen  extends Voertuig{
+public class Vrachtwagen  extends Voertuig implements Vervuiler{
 
     private float maxLading = 100000.0F;
     public Vrachtwagen(){
@@ -34,4 +34,9 @@ public class Vrachtwagen  extends Voertuig{
     public double getKyotoScore() {
         return (getGemVerbruik() * getMaxLading() / (maxLading / 1000.0F) );
    }
+
+    @Override
+    public double berekenVervuiling() {
+        return getKyotoScore() * 20.0F;
+    }
 }

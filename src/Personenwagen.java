@@ -1,4 +1,4 @@
-public class Personenwagen extends Voertuig{
+public class Personenwagen extends Voertuig implements Vervuiler{
     private int aantalDeuren = 4;
     private int aantalPassagiers = 5;
 
@@ -46,5 +46,10 @@ public class Personenwagen extends Voertuig{
     @Override
     public double getKyotoScore() {
         return getGemVerbruik() * getAantalPassagiers() / aantalPassagiers;
+    }
+
+    @Override
+    public double berekenVervuiling() {
+        return getKyotoScore() * 5.0F;
     }
 }

@@ -1,4 +1,4 @@
-public abstract class Voertuig {
+public abstract class Voertuig implements Privaat, Milieu{
     private String polishouder = "onbepaald";
     private float kostprijs;
     private int pk;
@@ -69,4 +69,19 @@ public abstract class Voertuig {
     }
 
     public abstract double getKyotoScore();
+
+    @Override
+    public void geefPrivateData() {
+        System.out.println("--- Private data van voertuig ---");
+        System.out.println("Polishouder: " + getPolishouder());
+        System.out.println("Nummerplaat: " + getNummerplaat());
+    }
+
+    @Override
+    public void geefMilieuData() {
+        System.out.println("--- Milieu data van voertuig ---");
+        System.out.println("Pk: " + getPk());
+        System.out.println("Gem. verbruik: " + getGemVerbruik());
+        System.out.println("Kostprijs: " + getKostprijs());
+    }
 }
